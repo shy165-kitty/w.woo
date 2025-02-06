@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko>"
+<head>
+<meta charset="UTF-8>"
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>오늘의 음식추천!</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h2>뭘 먹을지 모를때 사용해보세요!</h2>
+        <nav>
+            <ul>
+            <li><a href=https://www.instragram.com/w.woo_809>제작자 인스타그램</a></li>
+                <p>인스타그램 연결이 안된다면 고급을 누르고 링크에 들어가보세요</p>
+                <p>웹 아이디어를 보내주세요</p>
+            </ul>
+        </nav>
+    </header>
+
+
+
+    <main>
+        <section>
+            <h3>반갑습니다.</h3>
+        </section>
+
+        <div class="container">
+
+        <section>
+            <h3>버튼을 눌러서 음식 추천을 받아보세요!</h3>
+            <button onclick="recommendFood()">추천 받기</button>
+            <h2 id="food-result"></h2>
+        </div>
+        </section>
+    </main>
+    
+
+
+    
+
+
+
+    <footer>
+        <p>&copy; 마음대로 사용해보세요</p>
+    </footer>
+
+    <script>
+        function recommendFood() {
+            const foods = ["김치찌개", "된장찌개", "삼겹살", "비빔밥", "치킨", "피자", "초밥", "떡볶이", "제육볶음", "돈까스", "짜장면"];
+            const randomFood = foods[Math.floor(Math.random() * foods.length)];
+            document.getElementById("food-result").innerText = "추천 음식: " + randomFood;
+        }
+    </script>
+
+    <script src="script.js"></script>
+</body>
+</html>
